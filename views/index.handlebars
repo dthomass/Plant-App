@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>HCI Project Portfolio</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+	<!-- this is a comment in HTML -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->        
+</head>
+
+<body>
+	<div class="container">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div class="jumbotron">
+			<h1>Plant App</h1>
+			<p>An Application for Identifying plants and helping with Citizen Science!</p>
+			<a href="help">
+				<p>Help</p>
+			</a>
+			<a href="about" >
+				<p>About Us</p>
+			</a>
+		</div>
+
+
+		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
+		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
+		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+		<div class="project" id="upload">
+			<a href="upload" class="thumbnail">
+				<img src="images/lorempixel.people.1.jpeg" alt="Lorem Pixel image" class="img">
+				<p>Upload Image</p>
+			</a>
+		</div>
+		<div class="project" id="directToId">
+			<a href="id" class="thumbnail">
+				<img src="images/lorempixel.city.1.jpeg" alt="Lorem Pixel image" class="img">
+				<p>Start Identification</p>
+			</a>
+		</div>
+		
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
