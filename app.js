@@ -15,6 +15,8 @@ var	upload	=	require('./routes/upload');
 var	about	=	require('./routes/about');
 var	help	=	require('./routes/help');
 var	results	=	require('./routes/results');
+var	login	=	require('./routes/login');
+
 
 // Example route
 // var user = require('./routes/user');
@@ -50,6 +52,7 @@ app.get('/id',	id.viewId);
 app.get('/about',	about.viewAbout);
 app.get('/help',	help.viewHelp);
 app.get('/results',	results.viewResults);
+app.get('/login',	login.viewLogin);
 
 
 // Example route
