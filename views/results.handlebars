@@ -18,26 +18,43 @@
     <![endif]-->        
 </head>
 
-<body>
-	<div class="container">
-		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-		<!-- p means paragraph -->
-		<div class="jumbotron">
-			<h1>Results Page</h1>
-			<p>Here is what we think the plant is! Here you can confirm our guess or learn more about the plant</p>
-		</div>
-
-
-		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
-		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
-		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		<div class="project" id="index">
-			<a href="index" class="thumbnail">
-				<p>Continue To Home Page</p>
-			</a>
-		</div>
-		
-	</div>
+<body id="main" style="background-color:#fff; background-image: url('/images/Bg.jpg')">
+    <div class="container">
+        <div class="cover-container-quiz">
+            <div class="masthead clearfix" style="position: relative">
+                <div class="inner">
+                    <h1 class="masthead-brand page-header"><a href="index">Plant App</a></h1>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="about">About us</a></li>
+                            <li><a href="help">Help</a></li>
+                            <li><a href="login">Log In</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="project jumbotron">
+            <h2><p>Based on your answers, here is what we think the plant is: </p></h2>
+            <div class="row row-centered ">
+                <div class="col-sm-6 col-md-4 col-centered">
+                    <div class="thumbnail">
+                        <img src="/images/Bg.jpg" alt="...">
+                        <div class="caption">
+                            <h3>Nepenthes villosa</h3>
+                            <p><a href="https://en.wikipedia.org/wiki/Nepenthes_villosa" class="btn btn-primary" role="button">Wikipedia article to learn more</a><a href="id" class="btn btn-default" role="button">This is not the plant</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mastfoot">
+        <div class="inner">
+            <p>© Plant App 2016 </p>
+        </div> 
+    </div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
