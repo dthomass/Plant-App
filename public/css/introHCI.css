@@ -58,8 +58,12 @@ a:hover {
   background-color: #fff;
   border: 1px solid #fff;
 }
-
-
+/*
+ * Quiz texts
+ */
+.quizText {
+    font-size: 14px !important;   
+}
 /*
  * Base structure
  */
@@ -313,12 +317,12 @@ img { max-width: 100%; }
 	
 	.inner-bg { padding: 60px 0 110px 0; }
 
+
 }
 
 @media (max-width: 415px) {
 	
 	h1, h2 { font-size: 32px; }
-
 }
 /*
  * Footer
@@ -341,7 +345,7 @@ img { max-width: 100%; }
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    position: fixed; 
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -353,6 +357,7 @@ img { max-width: 100%; }
   .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+
   }
 }
 
@@ -361,5 +366,6 @@ img { max-width: 100%; }
   .mastfoot,
   .cover-container {
     width: 700px;
+    height: 100px;
   }
 }
