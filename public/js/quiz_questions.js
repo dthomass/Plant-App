@@ -9,7 +9,6 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	document.getElementById("demo").innerHTML = "Hello JavaScript!";
 	num = 0;
 	var mydata = JSON.parse(data);
 	//var json = JSON.parse(data);
