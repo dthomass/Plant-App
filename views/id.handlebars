@@ -1,6 +1,9 @@
 <!doctype html>
 
 <html>
+
+
+
 <head>
 	<title>HCI Project Portfolio</title>	
 	<meta charset="utf-8">
@@ -34,6 +37,8 @@
 		<!-- p means paragraph -->
 	<div>
 	  <h1 class="page-header">Identify The Plant </h1>
+
+    <p id="demo"></p>
     </div>
       
 <ol class="breadcrumb">
@@ -52,16 +57,22 @@
 	  <a href="results" class="img-responsive center-block">
 		 <img src="/images/flower.jpg" alt="flower" class="img" style="max-width:50%; display: block;margin: auto;">
       </a>
-      <div class="center-block" style="text-align:center"> What color is the plant? </div>
+      <div id="question" class="center-block" style="text-align:center">  </div>
        <table align ="center">
 <tr>
 <td> 
+      <script src="/js/jquery-1.11.0.js"></script>
+      <script src="/js/quiz_questions.js"></script>
+      <script src="/data/data.json"></script>
+
       <div class="btn-group center-block" role="group" aria-label="...">
-        <a href="results" class="btn btn-default"  style="text-align:center">Yellow</a>
-        <a href="results" class="btn btn-default"  style="text-align:center">Blue</a>
-        <a href="results" class="btn btn-default"  style="text-align:center">Orange</a>
-        <a href="results" class="btn btn-default"  style="text-align:center">White</a>
+        <a onclick="nextQuestion()" id="btn1" class="btn btn-default"  style="text-align:center"></a>
+        <a onclick="nextQuestion()" id="btn2" class="btn btn-default"  style="text-align:center"></a>
+        <a onclick="nextQuestion()" id="btn3" class="btn btn-default"  style="text-align:center"></a>
+        <a onclick="nextQuestion()" id="btn4" class="btn btn-default"  style="text-align:center"></a>
       </div>
+
+
     </td>
 </tr>
 </table>
