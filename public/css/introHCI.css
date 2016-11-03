@@ -96,7 +96,10 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-
+.cover-container-quiz {
+  margin-right: auto;
+  margin-left: auto;
+}
 /* Padding for spacing */
 .inner {
   padding: 30px;
@@ -355,7 +358,11 @@ img { max-width: 100%; }
   /* Handle the widths */
   .masthead,
   .mastfoot,
-  .cover-container {
+  .cover-container{
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+
+  }
+  .cover-container-quiz{
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
 
   }
@@ -364,8 +371,11 @@ img { max-width: 100%; }
 @media (min-width: 992px) {
   .masthead,
   .mastfoot,
-  .cover-container {
+  .cover-container-quiz {
     width: 700px;
     height: 100px;
+  }
+    .cover-container {
+    width: 700px;
   }
 }
