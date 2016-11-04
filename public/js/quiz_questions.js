@@ -21,6 +21,8 @@ function initializePage() {
 	isMoss = false;
 	plantTypeSelected = false;
 	//var json = JSON.parse(data);
+	document.getElementById("progress").innerHTML = "0% Complete (success)";
+
 	document.getElementById("question").innerHTML = data.InitialQuestion;
 	document.getElementById("btn1").innerHTML = data.InitialAnswers[0];
 	document.getElementById("btn2").innerHTML = data.InitialAnswers[1];
@@ -121,6 +123,13 @@ function nextQuestion() {
 		
 	console.log(num);
 	num++;
+	document.getElementById("progress").ariaValuenow = (100* num/4).toString();
+
+	document.getElementById("progress").innerHTML = (100*num/4).toString() + "% Complete";
+
+	document.getElementById("progress").style = "width: "+ (100*num/4).toString() + "%";
+
+
 
 
 
