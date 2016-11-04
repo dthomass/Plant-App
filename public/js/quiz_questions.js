@@ -127,7 +127,7 @@ function nextQuestion() {
 
 	document.getElementById("progress").innerHTML = (100*num/4).toString() + "% Complete";
 
-	document.getElementById("progress").style = "width: "+ (100*num/4).toString() + "%";
+	document.getElementById("progress").setAttribute("style","width: "+ (100*num/4).toString() + "%");
 
 
 
