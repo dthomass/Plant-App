@@ -1,1 +1,141 @@
-data = '[{"question": "Is it flowering", "answers":["Yes", "No", "I Cannot Tell", "Skip"]},{"question": "What Color Is It", "answers":["Red", "Blue", "Yellow", "Purple"]}]';
+data = {
+  "InitialQuestion": "What type of plant is this?",
+  "InitialAnswers": [
+    "Tree",
+    "Flowering Plant",
+    "Fern",
+    "Moss"
+  ],
+  "Trees": {
+    "TreeQuestions": [
+      "Does it have needles or scales or leaves?",
+      "Are it's branches thick or thin",
+      "Is the bark rough or smooth"
+    ],
+    "TreeAnswers": [
+      {
+        "TreeOptions": [
+          "Needles",
+          "Scales",
+          "Leaves",
+          "I cannot tell"
+        ]
+      },
+      {
+      	 "TreeOptions": [
+          "Thick",
+          "Thin",
+          "Middle",
+          "I cannot tell"
+          ]
+      },
+        {
+      	 "TreeOptions": [
+          "Rough",
+          "Smooth",
+          "Middle",
+          "I cannot tell"
+          ]
+      }
+    ]
+  },
+    "Flowers": {
+    "FlowerQuestions": [
+      "What Color is it?",
+      "How many petals does it have?",
+      "Are the petals thin or thick?"
+    ],
+    "FlowerAnswers": [
+      {
+        "FlowerOptions": [
+          "Red",
+          "Blue",
+          "Yellow",
+          "Purple"
+        ]
+      },
+      {
+      	 "FlowerOptions": [
+          "2-3",
+          "4-6",
+          "7-8",
+          "9+"
+          ]
+      },
+        {
+      	 "FlowerOptions": [
+          "Thick",
+          "Thin",
+          "Middle",
+          "I cannot tell"
+          ]
+      }
+    ]
+  },
+   "Ferns": {
+    "FernQuestions": [
+      "Is the stem close to the ground?",
+      "What shape are the leaves?",
+      "Where do you see spores?"
+    ],
+    "FernAnswers": [
+      {
+        "FernOptions": [
+          "Yes",
+          "No",
+          "Kind of",
+          "I cannot tell"
+        ]
+      },
+      {
+      	 "FernOptions": [
+          "Whorled",
+          "Pinnae",
+          "Double Pinnae",
+          "Other"
+          ]
+      },
+        {
+      	 "FernOptions": [
+          "On top of the leaves",
+          "Under the leaves",
+          "On the Stem",
+          "I do not see any"
+          ]
+      }
+    ]
+  },
+  "Moss": {
+    "MossQuestions": [
+      "How is the moss grouped?",
+      "What is it growing on?",
+      "What color is it?"
+    ],
+    "MossAnswers": [
+      {
+        "MossOptions": [
+          "Carpet",
+          "Cushion",
+          "Mat",
+          "Single Stem"
+        ]
+      },
+      {
+      	 "MossOptions": [
+          "Rock",
+          "Aquatic",
+          "Tree",
+          "Other"
+          ]
+      },
+        {
+      	 "MossOptions": [
+          "Dark Green",
+          "Light Green",
+          "Redish Brown",
+          "Other"
+          ]
+      }
+    ]
+  }
+};
