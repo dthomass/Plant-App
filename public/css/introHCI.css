@@ -48,7 +48,9 @@ a:focus,
 a:hover {
   color: #e0b42f;
 }
-
+.alert{
+  display:none;
+}
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
