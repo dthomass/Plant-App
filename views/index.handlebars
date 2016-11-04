@@ -32,7 +32,17 @@
                 <ul class="nav masthead-nav">
                   <li><a href="about">About us</a></li>
                   <li><a href="help">Help</a></li>
-                  <li><a href="login">Log In</a></li>
+                  <li><a id="login" href="login"></a></li>
+                <script>
+                var field = 'u';
+                var url = window.location.href;
+                if(url.indexOf('username') != -1){
+                  document.getElementById("login").innerHTML = "Hello Rob";
+                }
+                else{
+                  document.getElementById("login").innerHTML = "Log In";
+                }
+                </script>
                 </ul>
               </nav>
             </div>
