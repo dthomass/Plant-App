@@ -28,7 +28,22 @@ function initializePage() {
 	document.getElementById("btn2").innerHTML = data.InitialAnswers[1];
 	document.getElementById("btn3").innerHTML = data.InitialAnswers[2];
 	document.getElementById("btn4").innerHTML = data.InitialAnswers[3];
+	document.getElementById("backButton").disabled = true;
+
 	console.log(num);
+}
+
+function previousQuestion(){
+	if(num != 0){
+		num--;
+		if(num == 0){
+			initializePage();
+		}
+		else{
+		num--;
+		nextQuestion();
+		}
+	}
 }
 
 function goToResults(){
@@ -142,6 +157,9 @@ function nextQuestion() {
 		
 	console.log(num);
 	num++;
+	if(num > 0){
+		document.getElementById("backButton").disabled = false;
+	}
 	document.getElementById("progress").ariaValuenow = (100* num/4).toString();
 
 	document.getElementById("progress").innerHTML = (100*num/4).toString() + "% Complete";
