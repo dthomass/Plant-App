@@ -31,6 +31,25 @@ function initializePage() {
 	console.log(num);
 }
 
+function goToResults(){
+		if(isTree){
+		window.location.replace("results?resultPlant=TorreyPine&wiki=Torrey_pine");
+		}
+		else if(isFlower){
+		window.location.replace("results?resultPlant=flwResults&wiki=Nepenthes_villosa");
+		}
+		else if(isFern){
+		window.location.replace("results?resultPlant=CrowsNestFern&wiki=Asplenium_australasicum");
+		}
+		else if(isMoss){
+		window.location.replace("results?resultPlant=CommonHairCapMoss&wiki=Polytrichum_commune");
+		}
+		else{
+		window.location.replace("results");
+		}
+
+}
+
 
 function Btn1Press(){
 	if(!plantTypeSelected){
@@ -38,8 +57,8 @@ function Btn1Press(){
 		plantTypeSelected = true;
 	}
 	if(num == 3){
-		window.location.replace("results");
-	}
+		goToResults();
+		}
 	else{
 	nextQuestion();
 	}
@@ -52,7 +71,7 @@ function Btn2Press(){
 		plantTypeSelected = true;
 	}
 	if(num == 3){
-		window.location.replace("results");
+		goToResults();
 	}
 	else{
 	nextQuestion();
@@ -64,7 +83,7 @@ function Btn3Press(){
 		plantTypeSelected = true;
 	}
 	if(num == 3){
-		window.location.replace("results");
+		goToResults();
 	}
 	else{
 	nextQuestion();
@@ -76,7 +95,7 @@ function Btn4Press(){
 		plantTypeSelected = true;
 	}
 	if(num == 3){
-		window.location.replace("results");
+		goToResults();
 	}
 	else{
 	nextQuestion();
@@ -136,35 +155,4 @@ function nextQuestion() {
 }
 
 
-function anagrammedName(name) {
-	// Thanks, Internet Anagram Server!
-	
-	if (name == "Doug Engelbart") {
-		return "Notable Grudge";
-	} 
-	else if (name == "Ivan Sutherland") {
-		return "Vandal Heist Run";
-	}
-	else if (name == "JCR Licklider") {
-		return "Crick Rid Jell";
-	}
-	else if (name == "Vannevar Bush") {
-		return "Ravens Van Hub";
-	}
-	else if (name == "Alan C. Kay") {
-		return "Canal Yak";
-	}
-	else if (name == "Allen Newell") {
-		return "Ellen All New";
-	}
-	else if (name == "Lucy Suchman") {
-		return "Lunacy Chums";
-	}
-	else if (name == "Grace Hopper") {
-		return "Gear Chopper";
-	}
-	else {
-		console.log(name + " not known for anagramming.");
-		return name;
-	}
-}
+

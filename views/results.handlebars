@@ -47,13 +47,36 @@
             <div class="row row-centered ">
                 <div class="col-sm-6 col-md-4 col-centered">
                     <div class="thumbnail">
-                        <img src="/images/flwResults.jpg" alt="...">
+                        <img id="resultImg" src="" alt="...">
                         <div class="caption">
-                            <h3>Bidens trichosperma</h3>
+                            <h3 id="plantName"></h3>
                             <p><button onclick="alertBox()" id="btnConfirm" class="btn btn-primary" role="button">Confirm and Upload to Database</button><a id="notConfirm" href="id" class="btn btn-default" role="button">This is not the plant</a></p>
                         </div>
                     </div>
-                    <p><a href="https://en.wikipedia.org/wiki/Nepenthes_villosa" class="btn btn-primary" role="button">Wikipedia article to learn more about the plant</a>
+                    <p><a id="wikiLink" href="" class="btn btn-primary" role="button">Wikipedia article to learn more about the plant</a>
+                     <script> 
+                    function getParams() {
+                    var idx = document.URL.indexOf('?');
+                    var params = new Array();
+                    if (idx != -1) {
+                        var pairs = document.URL.substring(idx + 1, document.URL.length).split('&');
+                        for (var i = 0; i < pairs.length; i++) {
+                                    nameVal = pairs[i].split('=');
+                                    params[nameVal[0]] = nameVal[1];
+                                }
+                            }
+                            return params;
+                        }
+
+                    params = getParams();
+                    resultPlant = unescape(params["resultPlant"]);
+                    var wiki = unescape(params["wiki"]);
+                    document.getElementById("resultImg").src="/images/"+resultPlant+".jpg";
+                    document.getElementById("wikiLink").href="https://en.wikipedia.org/wiki/"+wiki;
+                    document.getElementById("plantName").innerHTML=wiki.split("_").join(" ");
+
+
+                    </script>
                 </div>
             </div>
         </div>
