@@ -69,18 +69,6 @@
             <table align ="center">
                 <tr>
                     <td> 
-                        <script src="/js/jquery-1.11.0.js"></script>
-                        <script src="/js/quiz_questions.js"></script>
-                        <script src="/data/data.json"></script>
-
-                        <div class="btn-group center-block" role="group" aria-label="...">
-                            <a onclick="Btn1Press()" id="btn1" class="btn btn-default"  style="text-align:center"></a>
-                            <a onclick="Btn2Press()" id="btn2" class="btn btn-default"  style="text-align:center"></a>
-                            <a onclick="Btn3Press()" id="btn3" class="btn btn-default"  style="text-align:center"></a>
-                            <a onclick="Btn4Press()" id="btn4" class="btn btn-default"  style="text-align:center"></a>
-                        </div>
-                        <button onclick="previousQuestion()" id="backButton" type="button" class="btn btn-secondary">Previous Question</button>
-
                     <script> 
                     function getParams() {
                     var idx = document.URL.indexOf('?');
@@ -101,17 +89,26 @@
 
                     </script>
 
+                        <script src="/js/jquery-1.11.0.js"></script>
+                        <script src="/js/quiz_questions.js"></script>
+                        <script src="/data/data.json"></script>
+
+                        <div class="btn-group center-block" role="group" aria-label="...">
+                            <a onclick="Btn1Press()" id="btn1" class="btn btn-default"  style="text-align:center"></a>
+                            <a onclick="Btn2Press()" id="btn2" class="btn btn-default"  style="text-align:center"></a>
+                            <a onclick="Btn3Press()" id="btn3" class="btn btn-default"  style="text-align:center"></a>
+                            <a onclick="Btn4Press()" id="btn4" class="btn btn-default"  style="text-align:center"></a>
+                        </div>
+                        <button onclick="previousQuestion()" id="backButton" type="button" class="btn btn-secondary">Previous Question</button>
+
+
+
 
                     </td>
                 </tr>
             </table>
         </div>
     </div>    
-    </div>
-    <div class="mastfoot">
-        <div class="inner">
-            <p>© Plant App 2016 </p>
-        </div> 
     </div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
