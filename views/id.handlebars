@@ -62,8 +62,8 @@
         </div>
       
         <div class="project jumbotron" id="results" >
-            <a href="results" class="img-responsive center-block">
-               <img src="/images/flower.jpg" alt="flower" class="img" style="max-width:50%; display: block;margin: auto;">
+            <a class="img-responsive center-block">
+               <img id="quizPicture" src="/images/flower.jpg" alt="flower" class="img" style="max-width:50%; display: block;margin: auto;">
             </a>
             <div id="question" class="center-block" style="text-align:center">  </div>
             <table align ="center">
@@ -81,7 +81,25 @@
                         </div>
                         <button onclick="previousQuestion()" id="backButton" type="button" class="btn btn-secondary">Previous Question</button>
 
+                    <script> 
+                    function getParams() {
+                    var idx = document.URL.indexOf('?');
+                    var params = new Array();
+                    if (idx != -1) {
+                        var pairs = document.URL.substring(idx + 1, document.URL.length).split('&');
+                        for (var i = 0; i < pairs.length; i++) {
+                                    nameVal = pairs[i].split('=');
+                                    params[nameVal[0]] = nameVal[1];
+                                }
+                            }
+                            return params;
+                        }
 
+                    params = getParams();
+                    plantPicture = unescape(params["image"]);
+                    document.getElementById("quizPicture").src="/images/"+plantPicture+".jpg";
+
+                    </script>
 
 
                     </td>
