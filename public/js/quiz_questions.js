@@ -48,16 +48,16 @@ function previousQuestion(){
 
 function goToResults(){
 		if(isTree){
-		window.location.replace("results?resultPlant=TorreyPine&wiki=Torrey_pine");
+		window.location.replace("results?resultPlant=TorreyPine&wiki=Torrey_pine&image="+plantPicture);
 		}
 		else if(isFlower){
-		window.location.replace("results?resultPlant=flwResults&wiki=Nepenthes_villosa");
+		window.location.replace("results?resultPlant=flwResults&wiki=Nepenthes_villosa&image="+plantPicture);
 		}
 		else if(isFern){
-		window.location.replace("results?resultPlant=CrowsNestFern&wiki=Asplenium_australasicum");
+		window.location.replace("results?resultPlant=CrowsNestFern&wiki=Asplenium_australasicum&image="+plantPicture);
 		}
 		else if(isMoss){
-		window.location.replace("results?resultPlant=CommonHairCapMoss&wiki=Polytrichum_commune");
+		window.location.replace("results?resultPlant=CommonHairCapMoss&wiki=Polytrichum_commune&image="+plantPicture);
 		}
 		else{
 		window.location.replace("results");

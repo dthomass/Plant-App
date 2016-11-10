@@ -71,9 +71,11 @@
                     params = getParams();
                     resultPlant = unescape(params["resultPlant"]);
                     var wiki = unescape(params["wiki"]);
+                    var image = unescape(params["image"]);
                     document.getElementById("resultImg").src="/images/"+resultPlant+".jpg";
                     document.getElementById("wikiLink").href="https://en.wikipedia.org/wiki/"+wiki;
                     document.getElementById("plantName").innerHTML=wiki.split("_").join(" ");
+                    document.getElementById("notConfirm").href="id?image="+image;
 
 
                     </script>
