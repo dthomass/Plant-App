@@ -54,8 +54,7 @@
                             <p><button onclick="alertBox()" id="btnConfirm" class="btn btn-primary" role="button">Confirm and Upload to Database</button><a id="notConfirm" href="id" class="btn btn-default" role="button">This is not the plant</a></p>
                         </div>
                     </div>
-                    <p><a id="wikiLink" href="" >Wikipedia article to learn more about the plant</a>
-                    <a href="" id="map" class="btn btn-secondary">Map</a>
+                    <p><a id="wikiLink" href="" style="text-decoration: underline; color:#428bca; font-size: 16px">Wikipedia article to learn more about the plant</a>
                      <script> 
                     function getParams() {
                     var idx = document.URL.indexOf('?');
@@ -78,7 +77,7 @@
                     document.getElementById("wikiLink").href="https://en.wikipedia.org/wiki/"+wiki;
                     document.getElementById("plantName").innerHTML=wiki.split("_").join(" ");
                     document.getElementById("notConfirm").href="id?image="+image;
-                    document.getElementById("map").setAttribute('href', "map?image="+plantPicture);
+                    document.getElementById("map").setAttribute('href', "map?image="+resultPlant+"&fromUpload=true");
 
                     </script>
                 </div>
