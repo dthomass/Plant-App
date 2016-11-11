@@ -16,6 +16,7 @@ var	about	=	require('./routes/about');
 var	help	=	require('./routes/help');
 var	results	=	require('./routes/results');
 var	login	=	require('./routes/login');
+var	map	=	require('./routes/map');
 
 
 // Example route
@@ -53,7 +54,7 @@ app.get('/about',	about.viewAbout);
 app.get('/help',	help.viewHelp);
 app.get('/results',	results.viewResults);
 app.get('/login',	login.viewLogin);
-
+app.get('/map',	map.viewMap);
 
 // Example route
 // app.get('/users', user.list);

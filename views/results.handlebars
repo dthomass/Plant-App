@@ -27,6 +27,7 @@
                     <h1 class="masthead-brand page-header"><a href="index">Plant App</a></h1>
                     <nav>
                         <ul class="nav masthead-nav">
+                            <li><a href="map?image=tree" style="color:#e0b42f">Plant Map</a></li>
                             <li><a href="about">About us</a></li>
                             <li><a href="help">Help</a></li>
                             <li><a href="login">Log In</a></li>
@@ -41,7 +42,7 @@
         <div class="project jumbotron">
              <div id="alert" class="alert alert-success alert-dismissable" >
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                 Thank you for the confirmation. The image is sucessfully uploaded to the database. <a href="index">Go back to Homepage</a>. 
+                 Thank you for the confirmation. The image is sucessfully uploaded to the database.<br> <a href="" id="map" style="text-decoration: underline; color:#428bca">See the image on the Map</a> or <a href="index" style="text-decoration: underline; color:#428bca">Go back to Homepage</a>. 
         </div>
             <h2><p>Based on your answers, here is what we think the plant is: </p></h2>
             <div class="row row-centered ">
@@ -53,7 +54,8 @@
                             <p><button onclick="alertBox()" id="btnConfirm" class="btn btn-primary" role="button">Confirm and Upload to Database</button><a id="notConfirm" href="id" class="btn btn-default" role="button">This is not the plant</a></p>
                         </div>
                     </div>
-                    <p><a id="wikiLink" href="" class="btn btn-primary" role="button">Wikipedia article to learn more about the plant</a>
+                    <p><a id="wikiLink" href="" >Wikipedia article to learn more about the plant</a>
+                    <a href="" id="map" class="btn btn-secondary">Map</a>
                      <script> 
                     function getParams() {
                     var idx = document.URL.indexOf('?');
@@ -76,19 +78,13 @@
                     document.getElementById("wikiLink").href="https://en.wikipedia.org/wiki/"+wiki;
                     document.getElementById("plantName").innerHTML=wiki.split("_").join(" ");
                     document.getElementById("notConfirm").href="id?image="+image;
-
+                    document.getElementById("map").setAttribute('href', "map?image="+plantPicture);
 
                     </script>
                 </div>
             </div>
         </div>
        
-    </div>
-    
-    <div class="mastfoot">
-        <div class="inner">
-            <p>© Plant App 2016 </p>
-        </div> 
     </div>
         <script>
    function alertBox() {

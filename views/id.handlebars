@@ -5,7 +5,7 @@
 
 
 <head>
-	<title>HCI Project Portfolio</title>	
+	<title>HCI Project </title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -39,6 +39,7 @@
                 <h1 class="masthead-brand page-header"><a href="index">Plant App</a></h1>
                 <nav>
                     <ul class="nav masthead-nav">
+                        <li><a href="map?image=tree" style="color:#e0b42f">Plant Map</a></li>
                         <li><a href="about">About us</a></li>
                         <li><a href="help">Help</a></li>
                         <li><a href="login">Log In</a></li>
@@ -69,7 +70,22 @@
             <table align ="center">
                 <tr>
                     <td> 
-                    <script> 
+                 
+                        <div class="btn-group center-block" role="group" aria-label="...">
+                            <a onclick="Btn1Press()" id="btn1" class="btn btn-default"  style="text-align:center"></a>
+                            <a onclick="Btn2Press()" id="btn2" class="btn btn-default"  style="text-align:center"></a>
+                            <a onclick="Btn3Press()" id="btn3" class="btn btn-default"  style="text-align:center"></a>
+                            <a onclick="Btn4Press()" id="btn4" class="btn btn-default"  style="text-align:center"></a>
+                        </div>
+                        <button onclick="previousQuestion()" id="backButton" type="button" class="btn btn-secondary">Previous Question</button>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>    
+    </div>
+       <script> 
                     function getParams() {
                     var idx = document.URL.indexOf('?');
                     var params = new Array();
@@ -86,30 +102,12 @@
                     params = getParams();
                     plantPicture = unescape(params["image"]);
                     document.getElementById("quizPicture").src="/images/"+plantPicture+".jpg";
-
                     </script>
 
                         <script src="/js/jquery-1.11.0.js"></script>
                         <script src="/js/quiz_questions.js"></script>
                         <script src="/data/data.json"></script>
 
-                        <div class="btn-group center-block" role="group" aria-label="...">
-                            <a onclick="Btn1Press()" id="btn1" class="btn btn-default"  style="text-align:center"></a>
-                            <a onclick="Btn2Press()" id="btn2" class="btn btn-default"  style="text-align:center"></a>
-                            <a onclick="Btn3Press()" id="btn3" class="btn btn-default"  style="text-align:center"></a>
-                            <a onclick="Btn4Press()" id="btn4" class="btn btn-default"  style="text-align:center"></a>
-                        </div>
-                        <button onclick="previousQuestion()" id="backButton" type="button" class="btn btn-secondary">Previous Question</button>
-
-
-
-
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>    
-    </div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 </body>
