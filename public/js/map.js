@@ -1,56 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Plant Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/introHCI.css" rel="stylesheet">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 80%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body id="main" style="background-color:#fff; background-image: url('/images/Bg.jpg')">
-      <div class="container">
-        <div class="cover-container-quiz">
-            <div class="masthead clearfix" style="position: relative">
-                <div class="inner">
-                <h1 class="masthead-brand page-header"><a href="index">Plant App</a></h1>
-                <nav>
-                    <ul class="nav masthead-nav">
-                        <li><a href="map?image=tree">Plant Map</a></li>
-                        <li><a href="about">About us</a></li>
-                        <li><a href="help">Help</a></li>
-                        <li><a href="login">Log In</a></li>
-                    </ul>
-                </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="project jumbotron" style="background-color:transparent; padding-top:20px; padding-bottom:0px"> 
-        <ol class="breadcrumb">
-            <li><a href="index" class ="quizText">Home</a></li>
-            <li><a class="active" class ="quizText">Plant Map</a></li>
-        </ol>
-      </div>
-    <div id="map" style="height: 70%"></div>
-       
-  
-    <script>
-        
+     
         function getParams() {
                     var idx = document.URL.indexOf('?');
                     var params = new Array();
@@ -155,11 +103,3 @@
             TILE_SIZE * (0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI)));
       }
         
-          
-    </script>
-  
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZg1QQ6DEF8FOT8lgkA3i55har3lhba0M&callback=initMap">
-    </script>
-  </body>
-</html>
