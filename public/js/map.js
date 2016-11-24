@@ -13,7 +13,10 @@
                         }
 
                     params = getParams();
-                    plantPicture = "/images/"+unescape(params["image"])+".jpg";
+                    if(unescape(params["image"]) != 'undefined')
+                        plantPicture = "/images/"+unescape(params["image"])+".jpg";
+                    else
+                        plantPicture = "/images/tree.jpg";
                     fromUpload = unescape(params["fromUpload"]);
                          
                     document.getElementById("quizPicture").src="/images/"+plantPicture+".jpg";
