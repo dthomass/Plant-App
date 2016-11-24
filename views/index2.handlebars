@@ -78,9 +78,17 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <!------------------->            
             
             <div id="map" style="width: 600px; height: 200px; color: #000000; margin: 0 auto;"></div>
-            <div> <a href = "map" style="text-decoration:underline; font-size: 16px"> View the uploads on the map</a></div>
+            <div> <a href = "map" style="text-decoration:underline; font-size: 16px" onclick="handleMapClicks()"> View the uploads on the map</a></div>
        
-  
+  <script>
+    function handleMapClicks() {
+  ga('send', 'event', {
+    eventCategory: 'Map',
+    eventAction: 'click',
+    eventLabel: event.target.href
+  });
+}
+</script>
     <script>
         
         function getParams() {
@@ -225,5 +233,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   ga('create', 'UA-87942906-1', 'auto');
   ga('send', 'pageview');
     </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
   </body>
 </html>
