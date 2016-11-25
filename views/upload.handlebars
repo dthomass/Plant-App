@@ -18,7 +18,7 @@
     <![endif]-->        
 </head>
 
-<body id="main" style="background-color:#fff; background-image: url('/images/Bg.jpg')">
+<body id="main" style="background-color:#fff; background-color: #fff">
     <div class="container">
         <div class="cover-container-quiz">
             <div class="masthead clearfix" style="position: relative">
@@ -26,11 +26,11 @@
                     <h1 class="masthead-brand page-header"><a href="index">Plant App</a></h1>
                     <nav>
                         <ul class="nav masthead-nav">
-                            <li><a href="map?image=tree">Plant Map</a></li>
-                            <li><a href="about">About us</a></li>
-                            <li><a href="help">Help</a></li>
-                            <li><a href="login">Log In</a></li>
-                        </ul>
+                            <li><a href="map?image=tree" class = "header">Plant Map</a></li>
+                            <li><a href="about" class = "header">About us</a></li>
+                            <li><a href="help" class = "header">Help</a></li>
+                            <li><a id="login" href="login" class = "header">Login</a></li>
+                            </ul>
                     </nav>
                 </div>
             </div>
@@ -47,7 +47,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <a href="id?image=flower">
-                        <img src="/images/flower.jpg" alt="...">
+                        <img src="/images/flower.jpg" alt="..." style="height: 200px">
                     </a>
                     <div class="caption">
                         <h3>Picture of a plant</h3>
@@ -57,7 +57,7 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="/images/tree.jpg" alt="...">
+                    <img src="/images/tree.jpg" alt="..." style="height: 200px">
                     <div class="caption">
                         <h3>Picture of a plant</h3>
                         <p><a href="id?image=tree" class="btn btn-primary" role="button">Upload the image and Start Identifying</a></p>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="/images/camera.jpg" alt="...">
+                    <img src="/images/camera.jpg" alt="..." style="height: 200px">
                     <div class="caption">
                         <h3>Not a picture of a plant</h3>
                         <p><a href="id?image=camera" class="btn btn-primary" role="button">Upload the image and Start Identifying</a></p>

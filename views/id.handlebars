@@ -31,7 +31,7 @@
     </script>
 </head>
 
-<body id="main" style="background-color:#fff; background-image: url('/images/Bg.jpg')">
+<body id="main" style="background-color:#fff; background-color: #fff">
     <div class="container">
         <div class="cover-container-quiz">
             <div class="masthead clearfix" style="position: relative">
@@ -39,10 +39,10 @@
                 <h1 class="masthead-brand page-header"><a href="index">Plant App</a></h1>
                 <nav>
                     <ul class="nav masthead-nav">
-                        <li><a href="map?image=tree">Plant Map</a></li>
-                        <li><a href="about">About us</a></li>
-                        <li><a href="help">Help</a></li>
-                        <li><a href="login">Log In</a></li>
+                       <li><a href="map?image=tree" class = "header">Plant Map</a></li>
+                       <li><a href="about" class = "header">About us</a></li>
+                       <li><a href="help" class = "header">Help</a></li>
+                       <li><a id="login" href="login" class = "header">Login</a></li>
                     </ul>
                 </nav>
                 </div>
@@ -56,14 +56,13 @@
             <li><a href="upload" class ="quizText">Upload Photo</a></li>
             <li class="active" class ="quizText">Identify</li>
         </ol>	
-          <p class ="quizText">Answer some questions about the plant to identify it!</p>
         <div class="progress">
             <div id="progress" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
                 <span class="sr-only"></span>
             </div>
         </div>
       
-        <div class="project jumbotron" id="results" >
+        <div id="results" >
             <a class="img-responsive center-block">
                <img id="quizPicture" src="/images/flower.jpg" alt="flower" class="img" style="max-width:50%; display: block;margin: auto;">
             </a>

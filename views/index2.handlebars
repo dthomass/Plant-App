@@ -33,7 +33,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     <![endif]-->        
 
 </head>
-  <body class="main" id="main" style="background-image: url('/images/Bg.jpg')">
+  <body class="main" id="main" style="background-image: url('/images/Bg2.jpg')">
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -45,10 +45,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
               <h1 class="masthead-brand">Plant App</h1>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li><a href="map?image=tree" >Plant Map</a></li>
-                  <li><a href="about">About us</a></li>
-                  <li><a href="help">Help</a></li>
-                  <li><a id="login" href="login"></a></li>
+                  <li><a href="about" class = "header">About us</a></li>
+                  <li><a href="help" class = "header">Help</a></li>
+                  <li><a id="login" href="login" class = "header"></a></li>
                 <script>
                 var field = 'u';
                 var url = window.location.href;
@@ -64,20 +63,19 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
             </div>
           </div>
 
-          <div class="inner cover" style="margin-top:90px; margin-bottom: 100px">
+          <div class="inner cover" style="margin-top:90px; margin-bottom: 50px">
             <h1 class="cover-heading" style="font-size:24px; ">Be a scientist</h1>
-               <a type="submit" href="id?image=flower" class="btn btn-lg" style="background-color: #e0b42f; color: #fff;">Identify Someone Else's Plant</a>
-            <p class="lead" style="margin-top: 7px; margin-bottom:7px; ">OR</p>
-            <p class="lead" style="margin-bottom: 40px;">
-              <a href="upload" class="btn btn-lg btn-default">Upload a Picture to Identify Your Plant</a>
-            </p>
+
+            <p class="lead" style="margin-bottom: 0px">
+                <a href="upload" class="btn btn-lg" style="background-color: #86b94c; color: #fff;">Upload Picture to identify the plant</a>
+             </p>   
           </div>
 
             
 <!------------------->            
             
-            <div id="map" style="width: 600px; height: 200px; color: #000000; margin: 0 auto;"></div>
-            <div> <a href = "map?image=tree&?fromV2" style="text-decoration:underline; font-size: 16px" onclick="handleMapClicks()"> View the uploads on the map</a></div>
+            <div id="map" style="width: 300px; height: 200px; color: #000000; margin-left: 20px"></div>
+            <div> <a href = "map?image=tree&?fromV2" style="text-decoration:underline; text-shadow: none; font-size: 16px; margin-left: 20px" onclick="handleMapClicks()"> View the uploads on the map</a></div>
        
   <script>
     function handleMapClicks() {

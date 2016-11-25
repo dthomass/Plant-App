@@ -18,7 +18,7 @@
     <![endif]-->   
 </head>
 
-<body id="main" style="background-color:#fff; background-image: url('/images/Bg.jpg')">
+<body id="main" style="background-color:#fff; background-color: #fff">
 
     <div class="container">
         <div class="cover-container-quiz">
@@ -27,10 +27,10 @@
                     <h1 class="masthead-brand page-header"><a href="index">Plant App</a></h1>
                     <nav>
                         <ul class="nav masthead-nav">
-                            <li><a href="map?image=tree">Plant Map</a></li>
-                            <li><a href="about">About us</a></li>
-                            <li><a href="help">Help</a></li>
-                            <li><a href="login">Log In</a></li>
+                            <li><a href="map?image=tree" class = "header">Plant Map</a></li>
+                            <li><a href="about" class = "header">About us</a></li>
+                            <li><a href="help" class = "header">Help</a></li>
+                            <li><a id="login" href="login" class = "header">Login</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -51,7 +51,8 @@
                         <img id="resultImg" src="" alt="...">
                         <div class="caption">
                             <h3 id="plantName"></h3>
-                            <p><button onclick="alertBox()" id="btnConfirm" class="btn btn-primary" role="button">Confirm and Upload to Database</button><a id="notConfirm" href="id" class="btn btn-default" role="button">This is not the plant</a></p>
+                            <p><button onclick="alertBox()" id="btnConfirm" class="btn" role="button" style="background-color: #86b94c; color: #fff; margin-bottom: 10px">Confirm and Upload to Database</button><a id="notConfirm" href="id" class="btn" role="button"
+                            style="background-color: rgb(196, 197, 195); color: #fff;">This is not the plant</a></p>
                         </div>
                     </div>
                     <p><a id="wikiLink" href="" style="text-decoration: underline; color:#428bca; font-size: 16px">Wikipedia article to learn more about the plant</a>
