@@ -86,7 +86,7 @@ ol {
 }
 .main {
   color: #fff;
-  text-align: center;
+/*  text-align: center;*/
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
@@ -96,8 +96,8 @@ ol {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.1);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.1);
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -114,6 +114,7 @@ ol {
 /* Padding for spacing */
 .inner {
   padding: 30px;
+  text-shadow: none !important;
 }
 .row-centered {
     text-align:center;
@@ -130,6 +131,9 @@ ol {
 /*
  * Header
  */
+.header {
+    color: #555 !important;
+}
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -187,10 +191,12 @@ ol {
 /*
  * Login
  */
-
+h1 {
+    color: #555;
+}
 
 h3 {
-	font-size: 22px;
+	font-size: 18px;
     font-weight: 300;
     color: #555;
     line-height: 30px;
