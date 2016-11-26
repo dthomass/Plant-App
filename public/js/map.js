@@ -16,32 +16,32 @@
     }
 
     params = getParams();
-alert("here");
     if(unescape(params["image"]) != 'undefined')
         plantPicture = "/images/"+unescape(params["image"])+".jpg";
     else
         plantPicture = "/images/tree.jpg";
-alert(plantPicture);
+
     fromUpload = unescape(params["fromUpload"]);
                          
   //  document.getElementById("quizPicture").src="/images/"+plantPicture+".jpg";
     
 
     function initMap() {
-        alert("here");
-           var bangalore = {lat: -33.865427, lng: 151.196123};
+           var bangalore = {lat: -32.865427, lng: 150.196123};
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 8,
           center: bangalore,
           mapTypeId: 'terrain'
         });
  var SanDiego = new google.maps.LatLng(32.73, -117.1446);
-        var ucsd = new google.maps.LatLng(32.88, -117.23);
+        var ucsd = new google.maps.LatLng(32.00, -113.55);
         var park = new google.maps.LatLng(32.99, -115.07);
+        var explore = new google.maps.LatLng(31.86, -116.59);
         var upload ="<p style=\"color:#00FF00; font-size:20px; margin-bottom: 0px\">Your Upload</p><br>";
         var returnAddressBalboa = "Balboa Park, San Diego, CA 92104";
-        var returnAddressUCSD = "UC San Diego 9500 Gilman Dr, La Jolla, CA 92093";
+        var returnAddressUCSD = "Reserva de la Biosfera";
         var missionBay = "Glamis-Ocotillo Fun Desert Dune Buggy Park<br>Glamis, CA 92283, Brawley, CA 92227";
+        var exploreText = "<style>#hide{display: none;}</style>Ensenada <br> <strong><p style=\"color:red; margin:0px\">This area is unexplored.</p></strong> Explore the area, upload your pictures and identify the plant you found.<br><br><a href=\"upload\" class=\"btn btn-lg\" style=\"background-color: #86b94c; color: #fff;\">Start Identifying</a> <div id = \"hide\">"; 
         var uploadText;
           
         if(fromUpload == "true") {
@@ -80,6 +80,15 @@ alert(plantPicture);
           coordInfoWindow.open(map);
         });
           
+        var coordInfoWindow4 = new google.maps.InfoWindow();
+        coordInfoWindow4.setContent(createInfoWindowContent(explore, map.getZoom(), "", exploreText));
+        coordInfoWindow4.setPosition(explore);
+        coordInfoWindow4.open(map);
+
+        map.addListener('zoom_changed', function() {
+             coordInfoWindow4.setContent(createInfoWindowContent(explore, map.getZoom(), "", exploreText));
+          coordInfoWindow4.open(map);
+        });
           
         // Create a <script> tag and set the USGS URL as the source.
         var script = document.createElement('script');
@@ -103,6 +112,26 @@ alert(plantPicture);
 
         // Add a marker at the center of the map.
         addMarker(bangalore, map);
+        
+        
+        var icons = {
+          parking: {
+            name: 'Unexplored Areas',
+            icon: '/images/red.png'
+          },
+        };
+
+        
+        
+        var legend = document.getElementById('legend');
+          var type = icons.parking;
+          var name = type.name;
+          var icon = type.icon;
+          var div = document.createElement('div');
+          div.innerHTML = '<img src="' + icon + '"> ' + name;
+          legend.appendChild(div);
+        
+         map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
       }
 
 
