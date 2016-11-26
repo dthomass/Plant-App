@@ -1,32 +1,34 @@
-     var map;
+    var map;
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var labelIndex = 0;
-        function getParams() {
-                    var idx = document.URL.indexOf('?');
-                    var params = new Array();
-                    if (idx != -1) {
-                        var pairs = document.URL.substring(idx + 1, document.URL.length).split('&');
-                        for (var i = 0; i < pairs.length; i++) {
-                                    nameVal = pairs[i].split('=');
-                                    params[nameVal[0]] = nameVal[1];
-                                }
-                            }
-                            return params;
-                        }
+    
+    function getParams() {
+        var idx = document.URL.indexOf('?');
+        var params = new Array();
+        if (idx != -1) {
+            var pairs = document.URL.substring(idx + 1, document.URL.length).split('&');
+            for (var i = 0; i < pairs.length; i++) {
+                nameVal = pairs[i].split('=');
+                params[nameVal[0]] = nameVal[1];
+            }
+        }
+        return params;
+    }
 
-                    params = getParams();
-                    if(unescape(params["image"]) != 'undefined')
-                        plantPicture = "/images/"+unescape(params["image"])+".jpg";
-                    else
-                        plantPicture = "/images/tree.jpg";
-                    fromUpload = unescape(params["fromUpload"]);
+    params = getParams();
+alert("here");
+    if(unescape(params["image"]) != 'undefined')
+        plantPicture = "/images/"+unescape(params["image"])+".jpg";
+    else
+        plantPicture = "/images/tree.jpg";
+alert(plantPicture);
+    fromUpload = unescape(params["fromUpload"]);
                          
-                    document.getElementById("quizPicture").src="/images/"+plantPicture+".jpg";
+  //  document.getElementById("quizPicture").src="/images/"+plantPicture+".jpg";
     
 
-
-
-      function initMap() {
+    function initMap() {
+        alert("here");
            var bangalore = {lat: -33.865427, lng: 151.196123};
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 8,
@@ -133,7 +135,9 @@
       function eqfeed_callback(results) {
         map.data.addGeoJson(results);
       }
-google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+
   /* var map;
       function initMap() {
         var SanDiego = new google.maps.LatLng(32.73, -117.1446);
