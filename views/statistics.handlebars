@@ -2,70 +2,85 @@
 
 <html>
 <head>
-   
-  <title>Plant Explorer - Statistics</title>	
+  <title>Plant Explorer - Statistics</title>  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/introHCI.css" rel="stylesheet">
-  
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->        
- <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 80%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <script language="javascript">
+        function autoResizeDiv()
+        {
+            document.getElementById('main').style.height = window.innerHeight +'px';
+        }
+        window.onresize = autoResizeDiv;
+        window.onload = autoResizeDiv;
+        autoResizeDiv();
+    </script>
 </head>
- <body id="main" style="background-color:#fff; background-image: url('/images/Bg.jpg')">
-      <div class="container">
-        <div class="cover-container-quiz">
-            <div class="masthead clearfix" style="position: relative">
-                <div class="inner">
-                <h1 class="masthead-brand page-header"><a href="index">Plant App</a></h1>
-                <nav>
-                    <ul class="nav masthead-nav">
-                        <li><a href="map?image=tree">Plant Map</a></li>
-                        <li><a href="about">About us</a></li>
-                        <li><a href="help">Help</a></li>
-                        <li><a href="login">Log In</a></li>
-                    </ul>
-                </nav>
+<body id="main" style="background-image: url('/images/Bg2.jpg')">
+   
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+                <div class="cover-container-quiz">
+                    <div class="masthead clearfix" style="position: relative">
+                        <div class="inner">
+                            <h1 class="masthead-brand"><a href="index">Plant App</a></h1>
+                            <nav>
+                                <ul class="nav masthead-nav">
+                                    <li><a href="map?image=tree" class = "header">Plant Map</a></li>
+                                    <li><a href="about" class = "header">About us</a></li>
+                                    <li><a href="statistics" class = "header">Statistics</a></li>
+                                    <li><a id="login" href="login" class = "header">Login</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
-                
-            </div>
+                <div class="container">
+        <div class="project jumbotron">
+            <h2>We are...</h2>
            
-                <table style="float:right">
-                    <tr>
-                        <td>
-                            <a type="submit" href="statistics" class="btn btn-lg" style="background-color: #e0b42f; color: #fff; float: right; margin-bottom: 20px;">View Statistical Data</a>
-                        </td>
-                        <td>
-                           <a type="submit" href="index" class="btn btn-lg" style="background-color: #e0b42f; color: #fff; float: right; margin-bottom: 20px;">Exit the Map</a>
-                        </td>
-                    </tr>
-                </table>
-     
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="/images/Bg.jpg" alt="...">
+                        <div class="caption">
+                            <h3>Science Community</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="/images/Bg.jpg" alt="...">
+                        <div class="caption">
+                            <h3>Research</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="/images/Bg.jpg" alt="...">
+                        <div class="caption">
+                            <h3>Team</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+         
+            </div>
+        </div>
+     
+
+        <div class="mastfoot">
+            <div class="inner">
+                <p>© Plant App 2016 </p>
+            </div> 
+        </div>      
     </div>
 
-
-    <div id="map" style="height: 70%;"></div>
- 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -73,7 +88,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/map.js"></script>
-
   </body>
 </html>
