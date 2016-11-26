@@ -19,6 +19,7 @@ var	results	=	require('./routes/results');
 var	login	=	require('./routes/login');
 var	map	=	require('./routes/map');
 var	map2	=	require('./routes/map2');
+var statistics = require('./routes/statistics');
 
 
 // Example route
@@ -59,6 +60,8 @@ app.get('/results',	results.viewResults);
 app.get('/login',	login.viewLogin);
 app.get('/map',	map.viewMap);
 app.get('/map2', map2.viewMap);
+app.get('/statistics',	statistics.viewStatistics);
+
 
 // Example route
 // app.get('/users', user.list);
