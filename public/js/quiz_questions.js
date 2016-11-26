@@ -51,7 +51,7 @@ function goToResults(){
 		window.location.replace("results?resultPlant=TorreyPine&wiki=Torrey_pine&image="+plantPicture);
 		}
 		else if(isFlower){
-		window.location.replace("results?resultPlant=flwResults&wiki=Nepenthes_villosa&image="+plantPicture);
+		window.location.replace("results?resultPlant=flwResults&wiki=Cosmos_sulphureus&image="+plantPicture);
 		}
 		else if(isFern){
 		window.location.replace("results?resultPlant=CrowsNestFern&wiki=Asplenium_australasicum&image="+plantPicture);
